@@ -1,0 +1,714 @@
+"use client";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { twMerge } from "tailwind-merge";
+
+import { PageHero } from "@/components/PageHero";
+
+// CommitteesHero Component
+const CommitteesHero = () => {
+  return (
+    <PageHero
+      badge="॥ तमसो मा ज्योतिर्गमय ॥ · PRAKASH 2027"
+      title="Conference Committees"
+      subtitle="Organizing leadership, international & national advisory boards, and technical chairs steering PRAKASH 2027"
+      tagline="Meet the distinguished scholars, traditional masters, and academic leaders steering PRAKASH 2027"
+      primaryCta={{ label: "View Keynote Speakers", href: "/speakers" }}
+      secondaryCta={{ label: "About Institute", href: "/about" }}
+    />
+  );
+};
+
+// CommitteesSection Component
+const committeeData = {
+  honoraryPatrons: [
+    {
+      id: 1,
+      name: "Mr. Hari Singh Shekhawat",
+      role: "Director (Infrastructure)",
+      organization: "Poornima Group, Jaipur India"
+    },
+    {
+      id: 2,
+      name: "Mr. MKM Shah",
+      role: "Director (Admin & Finance)",
+      organization: "Poornima Group, Jaipur"
+    }
+  ],
+  patron: [
+    {
+      id: 3,
+      name: "Prof (Dr.) Dinesh Goyal",
+      role: "Director & Principal",
+      organization: "PIET"
+    }
+  ],
+  conferenceChair: [
+    {
+      id: 4,
+      name: "Prof. (Dr.) Rekha Nair",
+      role: "Professor, Department of Applied Sciences",
+      organization: "Poornima Institute of Engineering & Technology, India"
+    }
+  ],
+  conveners: [
+    {
+      id: 5,
+      name: "Dr Mahak Bhatia",
+      role: "Associate Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 6,
+      name: "Dr Ashwini Kumar",
+      role: "Associate Professor, Department of Computer Science",
+      organization: "Poornima Institute of Engineering & Technology"
+    }
+  ],
+  organizingSecretaries: [
+    {
+      id: 7,
+      name: "Dr. Deepen Banoriya",
+      role: "Professor, Department of Applied Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 8,
+      name: "Dr. Rituraj Singh Rathore",
+      role: "Associate Professor, Department of Applied Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    }
+  ],
+  organizingChairs: [
+    {
+      id: 9,
+      name: "Prof. (Dr) Anil Kumar"
+    },
+    {
+      id: 10,
+      name: "Prof. (Dr.) Budesh Kanwar"
+    },
+    {
+      id: 11,
+      name: "Prof. (Dr.) Payal Bansal"
+    }
+  ],
+  organizingCoChairs: [
+    {
+      id: 12,
+      name: "Dr. Shikha Gautam"
+    },
+    {
+      id: 13,
+      name: "Dr. Uday Pratap"
+    },
+    {
+      id: 14,
+      name: "Mr. Amit Kumar"
+    },
+    {
+      id: 15,
+      name: "Mr Abhishek Dandich"
+    },
+    {
+      id: 16,
+      name: "Ms. Alka Rani"
+    },
+    {
+      id: 17,
+      name: "Mr Vikas Kumar"
+    }
+  ],
+  technicalProgramCommittee: [
+    {
+      id: 18,
+      name: "Prof. O.P. Sikhwal",
+      role: "Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 19,
+      name: "Prof. Priya Mathur",
+      role: "Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 20,
+      name: "Dr. Madhav",
+      role: "Professor, Department of Computer Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 21,
+      name: "Dr Aisha Rafi",
+      role: "Associate Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 22,
+      name: "Dr Pooja Rani",
+      role: "Assistant Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 23,
+      name: "Mr Ashok Kumar",
+      role: "Assistant Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 24,
+      name: "Ms. Rimjhim Jain",
+      role: "Assistant Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 25,
+      name: "Dr Shruti Gupta",
+      role: "Associate Professor, Department of Computer Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 26,
+      name: "Dr Shruti Thapar",
+      role: "Associate Professor, Department of Computer Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 27,
+      name: "Dr. Rittam Dutta",
+      role: "Associate Professor, Department of Computer Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 28,
+      name: "Dr. Khushboo",
+      role: "Assistant Professor, Department of Computer Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    }
+  ],
+  publicationCommittee: [
+    {
+      id: 29,
+      name: "Prof. O.P. Sikhwal",
+      role: "Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 30,
+      name: "Dr. Shikha Gautam",
+      role: "Professor, Department of Computer Sciences",
+      organization: "Poornima Institute of Engineering & Technology"
+    },
+    {
+      id: 90,
+      name: "Dr Pooja rani",
+      role: "Assistant Professor, Department of Mathematics",
+      organization: "Poornima Institute of Engineering & Technology"
+    }
+  ],
+  socialMediaCommittee: [
+    { id: 31, name: "Prof. Krati Bhoomia" },
+    { id: 32, name: "Ms. Charul Bapna" },
+    { id: 33, name: "Ms Dhwani Gangal" },
+    { id: 34, name: "Mr Himanshu Giria" },
+    { id: 35, name: "Mr Shiv Prakash" },
+    { id: 36, name: "Mr Vishnu Prakash" }
+  ],
+  financeCommittee: [
+    { id: 37, name: "Dr Nitin Mathur" },
+    { id: 38, name: "Mr Vishal Rohella" },
+    { id: 39, name: "Dr. Neetu Sharma" }
+  ],
+  internationalAdvisory: [
+    {
+      id: 201,
+      name: "Vinay Deshpande",
+      role: "Bhishma School of Indian Knowledge System",
+      organization: "Australia Center"
+    },
+    {
+      id: 202,
+      name: "Shri. Chandrahas Jog",
+      role: "Bhishma School of Indian Knowledge System",
+      organization: "Australia Center"
+    },
+    {
+      id: 203,
+      name: "Dr. Pravina Rodrigues",
+      role: "Assistant Professor & Editor-in-Chief, Journal of Dharma Studies (Springer)",
+      organization: "Starr King School for the Ministry, California, USA"
+    },
+    {
+      id: 204,
+      name: "Dr. Antonio Marturano (PhD Law, Milan)",
+      role: "Editor, JICES (Emerald) & Author, Leadership & Philosophy (Routledge 2025)",
+      organization: "University of Rome Tor Vergata, Rome, Italy"
+    },
+    {
+      id: 40,
+      name: "Makinde, O. D.",
+      organization: "Stellenbosch University, Stellenbosch, South Africa"
+    },
+    {
+      id: 41,
+      name: "Opeyemi Oyedeji, Mojeed",
+      organization: "King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia"
+    },
+    {
+      id: 42,
+      name: "Prof. (Dr.) Brij B. Gupta",
+      organization: "Asia University, Taiwan"
+    },
+    {
+      id: 43,
+      name: "Prof. (Dr.) K. S. Nisar",
+      organization: "Prince Sattam Bin Abdulaziz University, Saudi Arabia"
+    },
+    {
+      id: 44,
+      name: "Prof. (Dr.) Dumitru Baleanu",
+      organization: "Cankaya University, Ankara, Turkey"
+    },
+    {
+      id: 45,
+      name: "Prof. (Dr.) Amer Ibrahim Al-Omari",
+      organization: "Al al-Bayt University, Jordan"
+    },
+    {
+      id: 46,
+      name: "Prof. (Dr.) A.M. Elsawah",
+      organization: "Beijing Normal University-Hong Kong Baptist University United International College, Zhuhai, China"
+    },
+    {
+      id: 47,
+      name: "Prof. (Dr.) Ong Seng Huat",
+      organization: "UCSI University, Malaysia"
+    },
+    {
+      id: 48,
+      name: "Prof. (Dr.) Sathiyaraj Thambiayya",
+      organization: "UCSI University, Kuala Lumpur, Malaysia"
+    },
+    {
+      id: 49,
+      name: "Prof. (Dr.) Ismail Naci Cangul",
+      organization: "Uludag University, Turkey"
+    },
+    {
+      id: 50,
+      name: "Prof. (Dr.) Vichian Laohakosol",
+      organization: "Kasetsart University, Bangkok, Thailand"
+    },
+    {
+      id: 51,
+      name: "Dr. Carlos M. Travieso-Gonzalez",
+      organization: "University of Las Palmas de Gran Canaria, Spain, Europe"
+    },
+    {
+      id: 52,
+      name: "Prof Roman Danel",
+      organization: "Institute of Technology and Business, Czech Republic, Europe"
+    },
+    {
+      id: 53,
+      name: "Prof. Mike Hinchey",
+      organization: "Chair UK and Ireland Section IEEE, UK, Ireland, Europe"
+    },
+    {
+      id: 54,
+      name: "Dr. Ankit Agrawal",
+      organization: "Northwestern University, USA, North America"
+    },
+    {
+      id: 55,
+      name: "Prof. Valentina E. Balas",
+      organization: "University of Arad, Romania, Europe"
+    },
+    {
+      id: 56,
+      name: "Dr. Sheng-Lung Peng",
+      organization: "National Tsing Hua University, Taiwan, Asia"
+    },
+    {
+      id: 57,
+      name: "Dr. Abhishek Mukherji",
+      role: "Field CTO & AVP / Head of AI Research",
+      organization: "Centerific, USA, North America"
+    }
+  ],
+  nationalAdvisory: [
+    {
+      id: 101,
+      name: "Prof. Uday S. Dixit",
+      role: "Head, Centre for Indian Knowledge Systems (CIKS)",
+      organization: "Indian Institute of Technology (IIT) Guwahati"
+    },
+    {
+      id: 102,
+      name: "Prof. Kshitij Patukale",
+      role: "Director & Scholar",
+      organization: "Bhishma School of Indian Knowledge System, Pune"
+    },
+    {
+      id: 103,
+      name: "Prof. Deepa S P Mathur",
+      role: "Professor, Department of English",
+      organization: "University of Rajasthan, Jaipur"
+    },
+    {
+      id: 104,
+      name: "Prof. Amitabh Vikram Dwivedi",
+      role: "Dean, Humanities and Social Sciences",
+      organization: "Shri Mata Vaishno Devi University"
+    },
+    {
+      id: 105,
+      name: "Dr. Preeti Bhatt",
+      role: "Associate Professor, Department of Humanities and Social Sciences",
+      organization: "Malaviya National Institute of Technology (MNIT), Jaipur"
+    },
+    {
+      id: 106,
+      name: "Dr. Sanju Choudhary",
+      role: "Assistant Professor",
+      organization: "University of Rajasthan, Jaipur"
+    },
+    {
+      id: 107,
+      name: "Dr. Kaustubh Ranjan",
+      role: "Assistant Professor, Department of English",
+      organization: "Indira Kala Sangit Vishwavidyalaya, Khairagarh, Chhattisgarh"
+    },
+    {
+      id: 108,
+      name: "Dr. Anil Aaniket",
+      role: "Assistant Professor, Department of History and Indian Culture",
+      organization: "University of Rajasthan, Jaipur"
+    },
+    {
+      id: 109,
+      name: "Dr. Krishan Kumar Kumawat",
+      role: "State Coordinator, Youth Skill Development Cell (NSS)",
+      organization: "Commissionerate of College Education, Rajasthan, Jaipur"
+    },
+    {
+      id: 110,
+      name: "Dr. Gurpreet Kaur",
+      role: "Assistant Professor & Head, Post Graduate Department of English",
+      organization: "Sri Guru Teg Bahadur Khalsa College, Sri Anandpur Sahib, Punjab"
+    },
+    {
+      id: 111,
+      name: "Dr. M. Rajaram",
+      role: "Associate Professor, PG and Research Department of English",
+      organization: "M.V. Muthiah Government Arts College for Women, Dindigul, Tamil Nadu"
+    },
+    {
+      id: 112,
+      name: "Dr. Rajesh Sharma",
+      role: "Academic Scholar & Expert in Indian Knowledge Systems",
+      organization: "Rajasthan, India"
+    },
+    {
+      id: 58,
+      name: "Prof (Dr.) Somitra Sanadhya",
+      organization: "Wadhwani School of AI and Intelligent Systems, IIT Kanpur, India, Asia"
+    },
+    {
+      id: 59,
+      name: "Prof. (Dr.) Dhanesh Patel",
+      organization: "Maharaja Sayajirao University of Baroda, Gujarat, India"
+    },
+    {
+      id: 60,
+      name: "Prof. (Dr.) S. Ponnusamy",
+      organization: "IIT, Chennai, India"
+    },
+    {
+      id: 61,
+      name: "Prof. (Dr.) Gajendra Kumar Vishwakarma",
+      organization: "IIT, Dhanbad, India"
+    },
+    {
+      id: 62,
+      name: "Prof. (Dr.) Swadesh Kumar Sahoo",
+      organization: "IIT, Indore, India"
+    },
+    {
+      id: 63,
+      name: "Dr. J. C. Bansal",
+      organization: "South Asian University, New Delhi, India"
+    },
+    {
+      id: 64,
+      name: "Prof. (Dr.) Kuldeep Singh Charak",
+      organization: "University of Jammu, Jammu"
+    },
+    {
+      id: 65,
+      name: "Prof. D.S. Hooda",
+      organization: "Former PVC, Kurukshetra, GJ University of Science, Hisar"
+    },
+    {
+      id: 66,
+      name: "Dr. K. K. Gupta",
+      organization: "Shri Ram Murti Smarak College of Engineering & Technology, Bareilly"
+    },
+    {
+      id: 67,
+      name: "Prof. (Dr.) C.B. Gupta",
+      organization: "Former Professor, BITS, Pilani and The North Cap University, Gurugram, India"
+    },
+    {
+      id: 68,
+      name: "Prof. (Dr.) Anil Goyal",
+      organization: "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (M. P.) India"
+    },
+    {
+      id: 69,
+      name: "Prof. (Dr.) D. K. Jain",
+      organization: "Madhav Institute of Technology & Science (MITS), Gwalior (M. P.) India"
+    },
+    {
+      id: 70,
+      name: "Dr. Sandeep Tiwari",
+      organization: "Vikram University, Ujjain (M.P.)"
+    },
+    {
+      id: 71,
+      name: "Prof. (Dr.) Binwal",
+      organization: "Mody University of Science and Technology, Lakshamangarh, Sikar (Raj.) India"
+    },
+    {
+      id: 72,
+      name: "Dr. Ritu Agarwal",
+      organization: "MNIT, Jaipur, (Raj.) India"
+    },
+    {
+      id: 73,
+      name: "Dr. S. D. Purohit",
+      organization: "RTU Kota (Raj.) India"
+    },
+    {
+      id: 74,
+      name: "Prof. (Dr.) V. K. Gupta",
+      organization: "Govt. Madhav Science College, Ujjain (M. P.) India"
+    },
+    {
+      id: 75,
+      name: "Prof. (Dr.) R. K. Sharma",
+      organization: "Govt. P. G. College, Shujalpur (M. P.) India"
+    },
+    {
+      id: 76,
+      name: "Dr. Mamta Singh",
+      organization: "Bundelkhand University, Jhansi, India"
+    },
+    {
+      id: 77,
+      name: "Dr. Ravi Gor",
+      organization: "Gujarat University, Ahmedabad"
+    },
+    {
+      id: 78,
+      name: "Prof. (Dr.) K. Srinivasa Rao",
+      organization: "SCSVMV University, Kanchipuram, Tamilnadu"
+    },
+    {
+      id: 79,
+      name: "Dr. Kailash M. Patil",
+      organization: "Dharmsinh Desai University, Nadiad, Gujarat"
+    },
+    {
+      id: 80,
+      name: "Dr. Ramakant Bhardwaj",
+      organization: "AMITY University, Kolkata (W.B.)"
+    },
+    {
+      id: 81,
+      name: "Dr. Vipin Kumar",
+      organization: "BKBIET, Pilani"
+    },
+    {
+      id: 82,
+      name: "Prof. (Dr.) A. K. Malik",
+      organization: "Rajarshi Tandon Open University, Prayagraj, (U. P.) India"
+    },
+    {
+      id: 83,
+      name: "Dr. R. K. Gujetiya",
+      organization: "Swami Vivekanand Govt. P. G. College, Neemuch (M. P.)"
+    },
+    {
+      id: 84,
+      name: "Dr. V. C. Jain",
+      organization: "Govt. Engineering College, Ajmer (Raj.)"
+    },
+    {
+      id: 85,
+      name: "Dr. R. P. Sharma",
+      organization: "Govt. Engineering College, Ajmer (Raj.)"
+    },
+  ],
+  ethicsPublicationIntegrityCommittee: [
+    { id: 87, name: "Mr Sharad Shrivastava" },
+    { id: 88, name: "Ms Dhwani Gangwal" },
+    { id: 89, name: "Ms Rimjhim Jain" }
+  ]
+};
+
+const CommitteesSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Animation variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.02 * index,
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }),
+    hover: {
+      y: -5,
+      boxShadow: "0 20px 40px -10px rgba(30, 58, 95, 0.08)",
+      borderColor: "rgba(30, 58, 95, 0.1)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 20
+      }
+    }
+  };
+
+  const CommitteeCard = ({ member, index, cardWidthClass }: { member: any, index: number, cardWidthClass: string }) => {
+    const cardContent = (
+      <div className="flex flex-col justify-center h-full space-y-3">
+        {member.logo && (
+          <div className="mb-2 flex justify-center h-30 relative px-2">
+            <Image
+              src={member.logo}
+              alt={`${member.name} logo`}
+              width={200}
+              height={80}
+              className="object-contain h-full w-auto"
+            />
+          </div>
+        )}
+        <h3 className="font-bold text-lg md:text-xl tracking-tight text-[#1C0B02] leading-tight text-center">{member.name}</h3>
+        {member.role && (
+          <p className="text-sm md:text-base text-[#EA580C] font-semibold text-center">{member.role}</p>
+        )}
+        {member.organization && (
+          <p className="text-sm md:text-base text-[#451A03]/80 leading-relaxed font-medium text-center">{member.organization}</p>
+        )}
+      </div>
+    );
+
+    return (
+      <motion.div
+        key={member.id}
+        className={twMerge(
+          "bg-[#FFFDF7] overflow-hidden p-6 min-h-[200px] flex flex-col justify-center transition-all duration-300 relative group hover:bg-[#FEF3C7]/40 border border-[#F59E0B]/10",
+          cardWidthClass,
+          member.website ? "cursor-pointer" : ""
+        )}
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        custom={index}
+        onClick={() => member.website && member.website !== "#" && window.open(member.website, "_blank")}
+      >
+        {cardContent}
+      </motion.div>
+    );
+  };
+
+  const CommitteeSection = ({ title, members, startIndex }: { title: string, members: any[], startIndex: number }) => {
+    const cardWidthClass =
+      members.length === 1
+        ? "w-full"
+        : members.length === 2
+          ? "w-full sm:w-[calc(50%-1px)]"
+          : members.length === 3
+            ? "w-full sm:w-[calc(50%-1px)] md:w-[calc(33.333%-1px)]"
+            : "w-full sm:w-[calc(50%-1px)] md:w-[calc(33.333%-1px)] lg:w-[calc(25%-1px)]";
+
+    const maxWithClass =
+      members.length === 1
+        ? "max-w-md"
+        : members.length === 2
+          ? "max-w-2xl"
+          : members.length === 3
+            ? "max-w-4xl"
+            : "max-w-full";
+
+    return (
+      <div className="mb-20 relative z-10 w-full">
+        <h3 className="text-2xl md:text-3xl font-bold text-center tracking-tight mb-10 pb-4 border-b border-[#F59E0B]/20 w-full px-4">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C2D12] via-[#C2410C] to-[#D97706]">
+            {title}
+          </span>
+        </h3>
+        <div className={`flex flex-wrap justify-center ${maxWithClass} gap-[1px] bg-[#F59E0B]/20 border border-[#F59E0B]/30 rounded-3xl overflow-hidden mx-auto shadow-xl shadow-[#EA580C]/5`}>
+          {members.map((member, index) => (
+            <CommitteeCard key={member.id} member={member} index={startIndex + index} cardWidthClass={cardWidthClass} />
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <section
+      className="py-12 sm:py-16 md:py-24 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #FFFDF7 0%, #FEF9EE 50%, #FFFDF7 100%)",
+      }}
+    >
+      {/* Grid texture */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 opacity-[0.03]"
+        style={{
+          backgroundImage: "linear-gradient(#EA580C 1px, transparent 1px), linear-gradient(90deg, #EA580C 1px, transparent 1px)",
+          backgroundSize: "32px 32px"
+        }}
+      />
+
+      <div className="container px-4 relative z-10">
+        <div className="mt-4 px-4 max-w-7xl mx-auto">
+          <CommitteeSection title="HONORARY PATRONS" members={committeeData.honoraryPatrons} startIndex={0} />
+          <CommitteeSection title="PATRON" members={committeeData.patron} startIndex={2} />
+          <CommitteeSection title="CONFERENCE CHAIR" members={committeeData.conferenceChair} startIndex={3} />
+          <CommitteeSection title="CONVENERS" members={committeeData.conveners} startIndex={4} />
+          <CommitteeSection title="CONFERENCE ORGANIZING SECRETARIES" members={committeeData.organizingSecretaries} startIndex={6} />
+          <CommitteeSection title="ORGANIZING CHAIRS" members={committeeData.organizingChairs} startIndex={8} />
+          <CommitteeSection title="ORGANIZING CO-CHAIRS" members={committeeData.organizingCoChairs} startIndex={11} />
+          <CommitteeSection title="TECHNICAL PROGRAM COMMITTEE" members={committeeData.technicalProgramCommittee} startIndex={17} />
+          <CommitteeSection title="PUBLICATION COMMITTEE" members={committeeData.publicationCommittee} startIndex={28} />
+          <CommitteeSection title="SOCIAL MEDIA COMMITTEE" members={committeeData.socialMediaCommittee} startIndex={30} />
+          <CommitteeSection title="FINANCE COMMITTEE" members={committeeData.financeCommittee} startIndex={36} />
+          <CommitteeSection title="INTERNATIONAL ADVISORY COMMITTEE" members={committeeData.internationalAdvisory} startIndex={39} />
+          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={57} />
+          <CommitteeSection title="ETHICS & PUBLICATION INTEGRITY COMMITTEE" members={committeeData.ethicsPublicationIntegrityCommittee} startIndex={86} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default function CommitteesPage() {
+  return (
+    <div>
+      <CommitteesHero />
+      <CommitteesSection />
+    </div>
+  );
+}

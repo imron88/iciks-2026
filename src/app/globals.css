@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --iks-saffron: #EA580C;
+    --iks-gold: #FBBF24;
+    --iks-amber: #F59E0B;
+    --iks-parchment: #FEF9EE;
+    --iks-cream: #FFFDF5;
+    --iks-terracotta: #C2410C;
+    --iks-temple-dark: #1C0B02;
+    --iks-deep-mahogany: #2E1104;
+  }
+
+  body {
+    background-color: #FFFDF7;
+    color: #2D1406;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: #F59E0B;
+    color: #1C0B02;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-5 py-2.5 rounded-xl font-semibold inline-flex items-center justify-center tracking-tight transition-all duration-300 active:scale-95;
+  }
+
+  .btn-primary {
+    @apply text-white shadow-lg;
+    background: linear-gradient(135deg, #EA580C 0%, #D97706 60%, #F59E0B 100%);
+    box-shadow: 0 4px 20px rgba(234, 88, 12, 0.35);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 6px 25px rgba(234, 88, 12, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-gold {
+    @apply text-[#1C0B02] font-bold shadow-md;
+    background: linear-gradient(135deg, #FDE68A 0%, #FBBF24 50%, #F59E0B 100%);
+    box-shadow: 0 4px 18px rgba(245, 158, 11, 0.3);
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 6px 22px rgba(245, 158, 11, 0.45);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-gold {
+    @apply bg-transparent border-2 border-[#F59E0B] text-[#D97706] font-semibold;
+  }
+
+  .btn-outline-gold:hover {
+    @apply bg-[#F59E0B]/10 text-[#B45309];
+  }
+
+  .tag {
+    @apply text-xs sm:text-sm inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-semibold uppercase tracking-wider;
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.1), rgba(245, 158, 11, 0.18));
+    border: 1px solid rgba(234, 88, 12, 0.25);
+    color: #C2410C;
+  }
+
+  .tag-dark {
+    @apply text-xs sm:text-sm inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full font-semibold uppercase tracking-wider;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(234, 88, 12, 0.15));
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    color: #FDE68A;
+  }
+
+  .section-title {
+    @apply text-center text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight px-4;
+    color: #1C0B02;
+  }
+
+  .section-des {
+    @apply text-center text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto px-4;
+    color: rgba(45, 20, 6, 0.75);
+  }
+
+  .card-iks {
+    @apply rounded-3xl p-6 sm:p-8 transition-all duration-300;
+    background: #FFFFFF;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    box-shadow: 0 8px 30px rgba(234, 88, 12, 0.05);
+  }
+
+  .card-iks:hover {
+    border-color: rgba(234, 88, 12, 0.4);
+    box-shadow: 0 16px 40px rgba(234, 88, 12, 0.12);
+    transform: translateY(-4px);
+  }
+}
+
+/* Sacred Geometric Vedic Mandala Background Pattern */
+.bg-mandala-pattern {
+  background-image: radial-gradient(circle at center, rgba(245, 158, 11, 0.08) 1px, transparent 1px),
+                    radial-gradient(circle at center, rgba(234, 88, 12, 0.04) 2px, transparent 2px);
+  background-size: 24px 24px, 48px 48px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Parchment Bhojpatra Warm Paper Tone */
+.bg-parchment {
+  background: linear-gradient(180deg, #FFFDF7 0%, #FEF9EE 50%, #FFF7ED 100%);
+}
+
+.bg-temple-dark {
+  background: linear-gradient(135deg, #180802 0%, #260E04 50%, #361405 100%);
+}
+
+/* Custom Scrollbar in Saffron & Gold */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #F59E0B 0%, #EA580C 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}
