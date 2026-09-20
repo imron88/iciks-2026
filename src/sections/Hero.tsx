@@ -200,12 +200,67 @@ export const Hero = () => {
           </Link>
         </div>
 
-        {/* 7. Institutional Organizer Attribution */}
-        <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-[#FED7AA]/75 font-medium">
-          <FaUniversity className="text-[#FBBF24] text-xs" />
-          <span>
-            Organized by <strong>Department of Applied Sciences</strong>, Poornima Institute of Engineering & Technology
-          </span>
+        {/* 7. Institutional Organizer, Collaboration & Publishing Partner Attribution */}
+        <div className="flex flex-col items-center gap-3.5 max-w-4xl mx-auto w-full">
+          {/* Organizer */}
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-[#FED7AA]/85 font-medium">
+            <FaUniversity className="text-[#FBBF24] text-xs flex-shrink-0" />
+            <span>
+              Organized by <strong className="text-[#FDE68A]">Department of Applied Sciences</strong>, Poornima Institute of Engineering & Technology
+            </span>
+          </div>
+
+          {/* In Collaboration With & Publishing Partner Badges */}
+          <div className="flex flex-wrap items-stretch justify-center gap-3 sm:gap-4 mt-1 w-full max-w-3xl">
+            {/* In Collaboration with Bhishma */}
+            <div className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-black/45 border border-[#F59E0B]/40 backdrop-blur-md text-left transition-all duration-200 hover:border-[#FBBF24]/70 shadow-lg flex-1 min-w-[280px]">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-white p-0.5 border border-[#F59E0B]/50 shadow-sm">
+                <Image
+                  src="/assets/pics/bhishma-logo.png"
+                  alt="Bhishma School of Indian Knowledge System"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="text-[10px] uppercase font-extrabold tracking-widest text-[#FBBF24]">In Collaboration With</span>
+                <span className="text-xs sm:text-sm font-bold text-[#FFFDF7] leading-tight">
+                  Bhishma School of Indian Knowledge System
+                </span>
+                <span className="text-[9px] text-[#FED7AA]/80 leading-tight mt-0.5">
+                  Affiliated to Bhishma Sanatan Vedic Hindu Univ., America & Central Sanskrit Univ., New Delhi
+                </span>
+              </div>
+            </div>
+
+            {/* Publishing Partner: Journal of Dharma Studies (Springer Nature) */}
+            <a
+              href="https://www.springer.com/journal/42240"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-black/45 border border-[#EA580C]/45 backdrop-blur-md text-left transition-all duration-200 hover:border-[#EA580C]/80 shadow-lg group flex-1 min-w-[280px]"
+            >
+              <div className="relative h-10 w-16 rounded-lg overflow-hidden flex-shrink-0 bg-[#4A150D] p-1 border border-[#EA580C]/40 flex items-center justify-center shadow-sm">
+                <Image
+                  src="/assets/pics/journal-dharma-studies.png"
+                  alt="Journal of Dharma Studies - Springer Nature"
+                  width={64}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="text-[10px] uppercase font-extrabold tracking-widest text-[#EA580C]">Publishing Partner · Springer Nature</span>
+                <span className="text-xs sm:text-sm font-bold text-[#FFFDF7] leading-tight group-hover:text-[#FDE68A] transition-colors">
+                  Journal of Dharma Studies
+                </span>
+                <span className="text-[9px] text-[#FED7AA]/80 leading-tight mt-0.5">
+                  Asian and Transcultural Religion, Philosophy, & Ethics
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 

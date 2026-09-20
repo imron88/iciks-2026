@@ -116,6 +116,114 @@ const PartnersHero = () => {
   );
 };
 
+// CollaborationPartnersSection Component
+const bhishmaLogoPath = "/assets/pics/bhishma-logo.png";
+const bhishmaAffiliationPath = "/assets/pics/bhishma-affiliation.png";
+
+const CollaborationPartnersSection = () => {
+  return (
+    <section 
+      className="py-16 md:py-24 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #FFFDF7 0%, #FEF9EE 50%, #FFFDF7 100%)",
+      }}
+    >
+      {/* Grid texture */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute inset-0 z-0 opacity-[0.03]"
+        style={{
+          backgroundImage: "linear-gradient(#EA580C 1px, transparent 1px), linear-gradient(90deg, #EA580C 1px, transparent 1px)",
+          backgroundSize: "32px 32px"
+        }}
+      />
+
+      <div className="container relative z-10 mx-auto max-w-7xl px-4">
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#EA580C]/10 text-[#EA580C] border border-[#EA580C]/20 mb-3">
+            Academic & Knowledge Collaboration
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C2D12] via-[#C2410C] to-[#D97706]">
+              In Collaboration With
+            </span>
+          </h2>
+          <p className="text-base sm:text-lg text-[#451A03]/80 leading-relaxed max-w-2xl mx-auto">
+            Distinguished institutions partnering with PRAKASH 2027 to revitalize and advance traditional Indian Knowledge Systems.
+          </p>
+        </div>
+
+        {/* Featured Collaboration Partner Card */}
+        <motion.div
+          className="max-w-4xl mx-auto bg-white rounded-3xl border border-[#F59E0B]/30 overflow-hidden shadow-[0_12px_40px_-10px_rgba(234,88,12,0.12)] transition-all duration-300 hover:border-[#EA580C]/50 hover:shadow-[0_20px_50px_-10px_rgba(234,88,12,0.18)]"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex flex-col md:flex-row">
+            {/* Left: Emblem */}
+            <div className="md:w-72 flex-shrink-0 p-8 sm:p-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#FFFDF7] to-[#FEF3C7]/50 border-b md:border-b-0 md:border-r border-[#F59E0B]/20">
+              <div className="relative">
+                <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-[#EA580C]/30 shadow-lg bg-white p-2 flex items-center justify-center">
+                  <Image
+                    src={bhishmaLogoPath}
+                    alt="Bhishma School of Indian Knowledge System Logo"
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="absolute -top-1 -right-1 w-9 h-9 bg-[#EA580C] rounded-full flex items-center justify-center z-10 shadow-md shadow-[#EA580C]/40">
+                  <FaUniversity className="w-4 h-4 text-white" />
+                </div>
+              </div>
+              <span className="mt-4 text-xs font-bold text-[#EA580C] tracking-widest uppercase text-center">
+                Knowledge Partner
+              </span>
+            </div>
+
+            {/* Right: Content */}
+            <div className="flex-1 p-6 sm:p-10 flex flex-col justify-center">
+              <div className="mb-4">
+                <span className="text-xs font-bold text-[#EA580C] uppercase tracking-wider block mb-1">
+                  Institutional Collaborator
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-black text-[#1C0B02] mb-3">
+                  Bhishma School of Indian Knowledge System
+                </h3>
+
+                {/* Affiliations Pills */}
+                <div className="space-y-1.5 my-3 p-3.5 rounded-xl bg-[#FEF9EE] border border-[#F59E0B]/30">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#7C2D12]">
+                    <span className="w-2 h-2 rounded-full bg-[#EA580C] flex-shrink-0" />
+                    <span>Affiliated to <strong>Bhishma Sanatan Vedic Hindu University, America</strong></span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#7C2D12]">
+                    <span className="w-2 h-2 rounded-full bg-[#EA580C] flex-shrink-0" />
+                    <span>Affiliated to <strong>Central Sanskrit University, New Delhi</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm sm:text-base text-[#451A03]/85 leading-relaxed mb-6 text-justify">
+                Bhishma School of Indian Knowledge System is a pioneering academic institution committed to the revitalization, preservation, and scientific evaluation of traditional Indian knowledge disciplines. By synthesizing classical Shastras, Sanskrit scholarship, and ancient heritage with contemporary academic methodology, Bhishma partners with PRAKASH 2027 to drive impactful, authentic, and globally relevant IKS research.
+              </p>
+
+              <div className="flex flex-wrap gap-2 text-xs font-semibold text-[#7C2D12]">
+                <span className="px-3 py-1 rounded-lg bg-[#EA580C]/10 border border-[#EA580C]/20">Vedic Sciences</span>
+                <span className="px-3 py-1 rounded-lg bg-[#EA580C]/10 border border-[#EA580C]/20">Sanskrit Hermeneutics</span>
+                <span className="px-3 py-1 rounded-lg bg-[#EA580C]/10 border border-[#EA580C]/20">Heritage Education</span>
+                <span className="px-3 py-1 rounded-lg bg-[#EA580C]/10 border border-[#EA580C]/20">Traditional Shastras</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // TechnicalPartnersSection Component
 const ieteLogoPath = "/assets/pics/iete.png";
 const ieeeLogoPath = "/assets/pics/ieee_sb.png";
@@ -168,7 +276,7 @@ const TechnicalPartnersSection = () => {
     <section 
       className="py-16 md:py-24 relative overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #FFFDF7 0%, #FEF9EE 50%, #FFFDF7 100%)",
+        background: "linear-gradient(180deg, #FEF9EE 0%, #FEF9EE 50%, #FFFDF7 100%)",
       }}
     >
       {/* Grid texture */}
@@ -261,22 +369,32 @@ const TechnicalPartnersSection = () => {
 };
 
 // PublicationPartnersSection Component
+const journalDharmaLogoPath = "/assets/pics/journal-dharma-studies.png";
 const crc = "/assets/pics/crc.png";
 const taru = "/assets/pics/taru.png";
-const aip = "/assets/pics/aip.jpg";
+const logoIci = "/assets/pics/logo-ici.png";
 
 const publicationPartners: Partner[] = [
   {
-    id: "pub-1",
-    name: "AIP Conference Proceedings",
-    bio: "Premier publisher of scientific conference proceedings from international meetings.",
-    description: "AIP Conference Proceedings program reports the findings presented at scientific meetings from large international conferences to small specialist workshops. With a distinguished history of publishing high-quality research, AIP ensures that groundbreaking discoveries and innovations presented at conferences reach the global scientific community through rigorous peer-review and wide dissemination.",
-    logo: aip,
+    id: "pub-dharma",
+    name: "Journal of Dharma Studies (Springer Nature)",
+    bio: "Asian and Transcultural Religion, Philosophy, & Ethics · Publishing Partner",
+    description: "The Journal of Dharma Studies is a premier, international peer-reviewed journal published by Springer Nature. It provides an esteemed scholarly platform dedicated to the multi-disciplinary study of Hindu, Buddhist, Jain, and Asian religious, philosophical, and ethical traditions. The journal bridges classical textual wisdom with modern comparative philosophy and ethics, offering selected high-quality papers from PRAKASH 2027 a prestigious international dissemination channel.",
+    logo: journalDharmaLogoPath,
     type: "publication",
-    website: "https://aip.scitation.org/journal/apc"
+    website: "https://www.springer.com/journal/42240"
   },
   {
-    id: "pub-2",
+    id: "pub-springer",
+    name: "Springer Conference Proceedings",
+    bio: "Proposed publisher of scientific conference proceedings, including LNNS / CCIS series.",
+    description: "Springer Conference Proceedings report the cutting-edge findings presented at prestigious international conferences. With a distinguished history of indexing in Scopus and global scientific visibility, Springer ensures that groundbreaking innovations reach researchers worldwide.",
+    logo: logoIci,
+    type: "publication",
+    website: "https://www.springer.com"
+  },
+  {
+    id: "pub-taru",
     name: "Taru Publication",
     bio: "Leading publisher of academic research papers and technical journals.",
     description: "Taru Publication is a distinguished academic publisher specializing in high-quality research publications across various technical and scientific disciplines. With a commitment to advancing knowledge and promoting scholarly excellence, Taru Publication provides a platform for researchers to share their innovative work with the global academic community.",
@@ -285,7 +403,7 @@ const publicationPartners: Partner[] = [
     website: "#"
   },
   {
-    id: "pub-3",
+    id: "pub-crc",
     name: "*CRC Publication",
     bio: "Premier publisher of technical and scientific resources with global reach.",
     description: "CRC Publication stands as a premier publisher in the technical and scientific publishing landscape, offering comprehensive resources that span multiple disciplines. With decades of experience in academic publishing, CRC Publication maintains rigorous editorial standards and provides authors with extensive support throughout the publication process.",
@@ -300,7 +418,7 @@ const PublicationPartnersSection = () => {
     <section 
       className="py-16 md:py-24 relative overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #FEF9EE 0%, #FEF9EE 50%, #FFFDF7 100%)",
+        background: "linear-gradient(180deg, #FFFDF7 0%, #FEF9EE 50%, #FFFDF7 100%)",
       }}
     >
       {/* Grid texture */}
@@ -315,13 +433,16 @@ const PublicationPartnersSection = () => {
 
       <div className="container relative z-10 mx-auto max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-16 px-4">          
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#EA580C]/10 text-[#EA580C] border border-[#EA580C]/20 mb-3">
+            Academic Dissemination
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C2D12] via-[#C2410C] to-[#D97706]">
               Publication Partners
             </span>
           </h2>
-          <p className="text-lg text-[#451A03]/80 leading-relaxed max-w-2xl mx-auto mt-5">
-            Renowned publishers committed to disseminating high-quality research and ensuring wide accessibility of scholarly work.
+          <p className="text-lg text-[#451A03]/80 leading-relaxed max-w-2xl mx-auto">
+            World-class publishers ensuring the rigorous peer review and wide international reach of research presented at PRAKASH 2027.
           </p>
         </div>
 
@@ -337,14 +458,14 @@ const PublicationPartnersSection = () => {
             >
               <div className="flex flex-col md:flex-row">
                 {/* Left: Image */}
-                <div className="md:w-64 flex-shrink-0 p-8 flex items-center justify-center bg-gradient-to-br from-[#FFFDF7] to-[#FEF3C7]/40">
+                <div className="md:w-72 flex-shrink-0 p-8 flex items-center justify-center bg-gradient-to-br from-[#FFFDF7] to-[#FEF3C7]/40">
                   <div className="relative">
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden border-4 border-[#F59E0B]/20 shadow-md bg-white p-4 transition-colors duration-300 group-hover:border-[#EA580C]/40">
+                    <div className="w-44 h-28 rounded-2xl overflow-hidden border-4 border-[#F59E0B]/20 shadow-md bg-white p-3 flex items-center justify-center transition-colors duration-300 group-hover:border-[#EA580C]/40">
                       <Image
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-                        width={128}
-                        height={128}
+                        width={176}
+                        height={112}
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -358,13 +479,27 @@ const PublicationPartnersSection = () => {
                 <div className="flex-1 p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-[#1C0B02] mb-2">{partner.name}</h3>
-                      <p className="text-base text-[#EA580C] font-semibold">{partner.bio}</p>
+                      <h3 className="text-2xl font-bold text-[#1C0B02] mb-1">{partner.name}</h3>
+                      <p className="text-sm sm:text-base text-[#EA580C] font-semibold">{partner.bio}</p>
                     </div>
                   </div>
-                  <p className="text-base text-[#451A03]/80 leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#451A03]/80 leading-relaxed mb-5 text-justify">
                     {partner.description}
                   </p>
+                  {partner.website && partner.website !== "#" && (
+                    <motion.a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#EA580C] hover:text-[#C2410C] font-semibold transition-colors group text-sm"
+                      whileHover={{ x: 5 }}
+                    >
+                      Visit Journal / Publisher Website
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2 group-hover:translate-x-1 transition-transform">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -379,8 +514,9 @@ export default function PartnersPage() {
   return (
     <>
       <PartnersHero />
-      <TechnicalPartnersSection />
+      <CollaborationPartnersSection />
       <PublicationPartnersSection />
+      <TechnicalPartnersSection />
     </>
   );
 }

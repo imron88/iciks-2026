@@ -169,7 +169,7 @@ export const Footer = () => {
         {/* ── Conference Footnote ── */}
         <div className="text-center mb-6 px-4">
           <p className="text-[#FED7AA]/75 text-[12px] sm:text-[13px] tracking-wide font-medium leading-relaxed max-w-4xl mx-auto">
-            PRAKASH 2027: International Conference on Indian Knowledge Systems · Organized by <strong className="text-[#FBBF24]">Department of Applied Sciences, Poornima Institute of Engineering & Technology, Jaipur</strong>.
+            PRAKASH 2027: International Conference on Indian Knowledge Systems · Organized by <strong className="text-[#FBBF24]">Department of Applied Sciences, Poornima Institute of Engineering & Technology, Jaipur</strong> · In collaboration with <strong className="text-[#FDE68A]">Bhishma School of Indian Knowledge System</strong> · Publishing Partner: <strong className="text-[#EA580C]">Journal of Dharma Studies (Springer Nature)</strong>.
           </p>
         </div>
 

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   FaCalendarAlt,
@@ -14,7 +15,9 @@ import {
   FaTrophy,
   FaMedal,
   FaStore,
-  FaUsers
+  FaUsers,
+  FaUniversity,
+  FaBook
 } from "react-icons/fa";
 
 import { PageHero } from "@/components/PageHero";
@@ -155,12 +158,9 @@ const importantDates = [
 ];
 
 const registrationFees = [
-  { category: "Academicians & Faculty", earlyBird: "INR 6,000", regular: "INR 7,000" },
-  { category: "Research Scholars & Ph.D. Students", earlyBird: "INR 4,500", regular: "INR 5,500" },
-  { category: "UG / PG Students", earlyBird: "INR 3,000", regular: "INR 3,500" },
-  { category: "Industry Professionals & Corporate", earlyBird: "INR 8,000", regular: "INR 9,000" },
-  { category: "Foreign Delegates / International Authors", earlyBird: "USD 120", regular: "USD 150" },
-  { category: "Attendees / Non-Presenting Delegates", earlyBird: "INR 1,500", regular: "INR 2,000" },
+  { category: "Indian Academicians & Faculty", earlyBird: "₹2,000", regular: "₹2,000" },
+  { category: "Research Scholars & Students", earlyBird: "₹1,000", regular: "₹1,000" },
+  { category: "Foreign Delegates", earlyBird: "$150", regular: "$300" },
 ];
 
 const registrationIncludes = [
@@ -222,6 +222,58 @@ const CallForPaperContent = () => {
             <p className="text-sm md:text-base leading-relaxed text-justify text-slate-900 font-semibold border-l-4 border-[#EA580C] pl-4">
               All submissions must represent authentic, original scholarship and must adhere to academic integrity standards.
             </p>
+
+            {/* In Collaboration With & Publishing Partner Highlight */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-[#F59E0B]/20">
+              {/* Collaboration Card */}
+              <div className="flex items-center gap-3.5 p-4 rounded-xl bg-[#FEF9EE] border border-[#F59E0B]/30">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-white p-1 border border-[#EA580C]/30 shadow-sm">
+                  <Image
+                    src="/assets/pics/bhishma-logo.png"
+                    alt="Bhishma School of Indian Knowledge System"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#EA580C] block">In Collaboration With</span>
+                  <h4 className="text-sm font-bold text-[#1C0B02] leading-tight">
+                    Bhishma School of Indian Knowledge System
+                  </h4>
+                  <p className="text-[10px] text-[#7C2D12] mt-0.5 leading-tight">
+                    Affiliated to Bhishma Sanatan Vedic Hindu Univ., America & Central Sanskrit Univ., New Delhi
+                  </p>
+                </div>
+              </div>
+
+              {/* Publishing Partner Card */}
+              <a
+                href="https://www.springer.com/journal/42240"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3.5 p-4 rounded-xl bg-[#FEF9EE] border border-[#EA580C]/30 hover:border-[#EA580C] hover:shadow-md transition-all group"
+              >
+                <div className="relative h-12 w-20 rounded-lg overflow-hidden flex-shrink-0 bg-[#4A150D] p-1 border border-[#EA580C]/30 flex items-center justify-center shadow-sm">
+                  <Image
+                    src="/assets/pics/journal-dharma-studies.png"
+                    alt="Journal of Dharma Studies - Springer Nature"
+                    width={80}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#EA580C] block">Publishing Partner · Springer Nature</span>
+                  <h4 className="text-sm font-bold text-[#1C0B02] group-hover:text-[#EA580C] transition-colors leading-tight">
+                    Journal of Dharma Studies
+                  </h4>
+                  <p className="text-[10px] text-[#7C2D12] mt-0.5 leading-tight">
+                    Asian and Transcultural Religion, Philosophy, & Ethics · Selected papers considered for publication
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </motion.div>
 
@@ -506,7 +558,7 @@ const CallForPaperContent = () => {
                   Registration Fee Structure
                 </h3>
                 <p className="text-xs text-[#2E1104]/60 mt-2 mb-4">
-                  (Tentative fees structure for PRAKASH 2027 hybrid conference delegates)
+                  (Official fee structure for PRAKASH 2027 hybrid conference delegates)
                 </p>
 
                 <div className="overflow-x-auto border border-[#F59E0B]/20 rounded-xl">

@@ -10,8 +10,10 @@ const crc = "/assets/pics/crc.png";
 const taru = "/assets/pics/taru.png";
 const idea = "/assets/pics/idea.png";
 const logoIci = "/assets/pics/logo-ici.png";
+const bhishmaLogo = "/assets/pics/bhishma-logo.png";
+const journalDharmaLogo = "/assets/pics/journal-dharma-studies.png";
 
-type PartnerType = "technical" | "publication" | "organizing";
+type PartnerType = "collaboration" | "publication" | "technical";
 
 interface Partner {
   id: string;
@@ -19,9 +21,46 @@ interface Partner {
   bio: string;
   logo: string;
   type: PartnerType;
+  website?: string;
+  affiliation?: string;
 }
 
 const partners: Partner[] = [
+  {
+    id: "collab-1",
+    name: "Bhishma School of Indian Knowledge System",
+    bio: "In collaboration with Bhishma School of Indian Knowledge System. Affiliated to Bhishma Sanatan Vedic Hindu University (America) & Central Sanskrit University (New Delhi). Dedicated to research, preservation, and education across Indian Knowledge Systems.",
+    logo: bhishmaLogo,
+    type: "collaboration",
+  },
+  {
+    id: "pub-dharma",
+    name: "Journal of Dharma Studies",
+    bio: "Publishing Partner: Journal of Dharma Studies — Asian and Transcultural Religion, Philosophy, & Ethics. International peer-reviewed research journal published by Springer Nature.",
+    logo: journalDharmaLogo,
+    type: "publication",
+  },
+  {
+    id: "pub-1",
+    name: "Springer Conference Proceedings",
+    bio: "Proposed publisher of scientific conference proceedings, including Lecture Notes in Networks and Systems (LNNS) or CCIS series.",
+    logo: logoIci,
+    type: "publication",
+  },
+  {
+    id: "pub-2",
+    name: "Taru Publication",
+    bio: "Leading publisher of academic research papers and technical journals.",
+    logo: taru,
+    type: "publication",
+  },
+  {
+    id: "pub-3",
+    name: "*CRC Publication",
+    bio: "Premier publisher of technical and scientific resources with global reach.",
+    logo: crc,
+    type: "publication",
+  },
   {
     id: "tech-1",
     name: "IETE",
@@ -43,40 +82,12 @@ const partners: Partner[] = [
     logo: acmLogoPath,
     type: "technical",
   },
-  {
-    id: "pub-1",
-    name: "Springer Lecture Notes",
-    bio: "Proposed publisher of scientific conference proceedings, including Lecture Notes in Networks and Systems (LNNS) or CCIS series.",
-    logo: logoIci,
-    type: "publication",
-  },
-  {
-    id: "pub-2",
-    name: "Taru Publication",
-    bio: "Leading publisher of academic research papers and technical journals.",
-    logo: taru,
-    type: "publication",
-  },
-  {
-    id: "pub-3",
-    name: "*CRC Publication",
-    bio: "Premier publisher of technical and scientific resources with global reach.",
-    logo: crc,
-    type: "publication",
-  },
-  // {
-  //   id: "org-1",
-  //   name: "AICTE IDEA Lab, PIET",
-  //   bio: "Innovation, Design, Engineering, and Art Laboratory at Poornima Institute of Engineering & Technology.",
-  //   logo: idea,
-  //   type: "organizing",
-  // },
 ];
 
 const tabs: { key: PartnerType; label: string }[] = [
-  { key: "technical", label: "Technical Partners" },
+  { key: "collaboration", label: "In Collaboration With" },
   { key: "publication", label: "Publication Partners" },
-  // { key: "organizing", label: "Organizing Partners" },
+  { key: "technical", label: "Technical Partners" },
 ];
 
 const contentVariants = {
@@ -91,7 +102,7 @@ const itemVariants = {
 };
 
 export const PartnersSection = () => {
-  const [activeTab, setActiveTab] = useState<PartnerType>("technical");
+  const [activeTab, setActiveTab] = useState<PartnerType>("collaboration");
   const filtered = partners.filter((p) => p.type === activeTab);
 
   return (

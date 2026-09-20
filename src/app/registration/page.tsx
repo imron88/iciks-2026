@@ -256,24 +256,19 @@ const RegistrationFees = () => {
 
   const registrationData = [
     {
-      category: "Academician / PhD Scholar",
-      earlyBird: "INR 7,500 / USD 200",
-      regular: "INR 8,500 / USD 250"
+      category: "Indian Academicians / Faculty",
+      earlyBird: "₹2,000",
+      regular: "₹2,000"
     },
     {
-      category: "UG / PG Student",
-      earlyBird: "INR 6,500 / USD 150",
-      regular: "INR 7,500 / USD 200"
+      category: "Research Scholars / Students",
+      earlyBird: "₹1,000",
+      regular: "₹1,000"
     },
     {
-      category: "Industry Professional",
-      earlyBird: "INR 9,000 / USD 250",
-      regular: "INR 10,000 / USD 300"
-    },
-    {
-      category: "Co-Author / Listener Only",
-      earlyBird: "INR 4,000 / USD 100",
-      regular: "INR 4,000 / USD 100"
+      category: "Foreign Delegates",
+      earlyBird: "$150",
+      regular: "$300"
     }
   ];
 
