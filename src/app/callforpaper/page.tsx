@@ -29,7 +29,7 @@ const CallForPaperHero = () => {
       badge="॥ तमसो मा ज्योतिर्गमय ॥ · PRAKASH 2027"
       title="Call for Papers"
       subtitle="Submit original, high-quality research across 5 broad tracks & 35+ sub-tracks in Indian Knowledge Systems"
-      tagline="Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage"
+      tagline="Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage (Legacy)"
       primaryCta={{ label: "Submit Paper via Email", href: "mailto:iks2027@poornima.org?subject=Paper%20Submission%20-%20PRAKASH%202027" }}
       secondaryCta={{ label: "Explore 5 Tracks", href: "#tracks" }}
     />
@@ -72,6 +72,30 @@ function SectionHeading({ label, title, desc }: { label: string; title: string; 
     </div>
   );
 }
+
+// Broad Thematic Areas
+const broadAreas = [
+  {
+    title: "Scientific Heritage, Mathematics, and Technology",
+    desc: "Historical developments in Indian mathematics, astronomy, metallurgy, water management, and computational linguistics."
+  },
+  {
+    title: "Holistic Health, Wellness, and Life Sciences",
+    desc: "Integration of Ayurveda, Siddha, and Yoga into modern healthcare systems; ethnobotany and natural product chemistry."
+  },
+  {
+    title: "Environmental Ethics, Sustainable Architecture, and Agriculture",
+    desc: "Vastu Shastra, Traditional Ecological Knowledge (TEK), ancient water conservation, organic farming, and climate change mitigation."
+  },
+  {
+    title: "Governance, Economics, Ethics, and Management",
+    desc: "Kautilya's Arthashastra, Dharma, and Nyaya as foundations for leadership, ethics, and policy; sustainable trade traditions."
+  },
+  {
+    title: "Pedagogy, Arts, and Cultural Heritage",
+    desc: "Implementation of IKS in mainstream education under NEP 2020; Kalas (art forms), performance arts, digitization, and manuscriptology."
+  }
+];
 
 // Complete 5 Tracks & 35+ Sub-tracks Data
 const tracksData = [
@@ -123,12 +147,12 @@ const tracksData = [
     desc: "This track applies the principles of ancient Indian polity and ethics to modern leadership, corporate governance, and economic policy.",
     subtracks: [
       { code: "4.1", text: "Kautilya's Arthashastra – Statecraft, Public Administration, and Geopolitical Strategy" },
-      { code: "4.2", text: "Dharma and Nyaya – Foundations of Corporate Ethics, Legal Theory, Social Justice, Buddhism, and Vidhur Niti" },
-      { code: "4.3", text: "Ancient Trade Networks – Maritime Commerce, Supply Chain Logistics, Economic Diplomacy, Chalukya & Chola Administration, and Gupta Administration" },
+      { code: "4.2", text: "Dharma and Nyaya – Foundations of Corporate Ethics, Legal Theory, and Social Justice, Buddhism, Vidhur Niti." },
+      { code: "4.3", text: "Ancient Trade Networks – Maritime Commerce, Supply Chain Logistics, and Economic Diplomacy, Chalukya’s & Chola Administration System, Gupta Administration" },
       { code: "4.4", text: "The Shreni System – Guild Management, Worker Welfare, and Community-driven Commerce" },
       { code: "4.5", text: "Conflict Resolution – Dialogic Processes and Peacemaking Strategies from the Mahabharata and Ramayana" },
       { code: "4.6", text: "Fiscal Policies and Taxation – Wealth Distribution Models and Welfare Economics in Ancient Polity" },
-      { code: "4.7", text: "Leadership Traits – Mentorship skills, Decision-making, and Human Resource Management from Upanishadic Dialogues and Vedas" }
+      { code: "4.7", text: "Leadership Traits – Mentorship skills, Decision-making, and Human Resource Management from Upanishadic Dialogues, Vedas" }
     ]
   },
   {
@@ -143,8 +167,8 @@ const tracksData = [
       { code: "5.5", text: "Indigenous Visual Arts – Chitrasutra, Iconometry, and Aesthetic Principles in Ancient Painting" },
       { code: "5.6", text: "Gamification of Learning – Teaching Humanities and Logic through Traditional Board Games" },
       { code: "5.7", text: "Heritage Tourism and Digital Museums – Curation, Storytelling, and Public Outreach for Cultural Assets" },
-      { code: "5.8", text: "Intersecting Theories of Bharthari, Vishnudutt, Panini, Bharat Muni, SIKSAS, and Bhagwat Geeta" },
-      { code: "5.9", text: "Ancient Poets & Texts, Folk Narratives, and Local Voices in Global Discourse" }
+      { code: "5.8", text: "Intersecting Theories of Bharthari, Vishnudutt, Panini, Bharat Muni, SIKSAS, Bhagwat Geeta," },
+      { code: "5.9", text: "Ancient Poets & Texts, Folk Narratives, Local Voices Global Narratives" }
     ]
   }
 ];
@@ -284,6 +308,28 @@ const CallForPaperContent = () => {
             title="Conference Tracks & Sub-Tracks"
             desc="Explore the 5 core tracks and 35+ specialized sub-tracks covering scientific heritage, healthcare, sustainability, statecraft, and pedagogy."
           />
+
+          {/* Broad Thematic Summary Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-12">
+            {broadAreas.map((area, bIdx) => (
+              <div
+                key={bIdx}
+                className="bg-[#FFFDF7] p-5 rounded-2xl border border-[#F59E0B]/25 hover:border-[#EA580C]/40 hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-[11px] font-bold text-[#EA580C] uppercase tracking-wider mb-1.5 block">
+                    Thematic Area 0{bIdx + 1}
+                  </span>
+                  <h4 className="font-bold text-sm sm:text-base text-[#1C0B02] mb-1.5 leading-snug">
+                    {area.title}
+                  </h4>
+                  <p className="text-xs text-[#2E1104]/80 leading-relaxed">
+                    {area.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
 
           <div className="flex flex-col gap-8 max-w-7xl mx-auto">
             {tracksData.map((track, idx) => (

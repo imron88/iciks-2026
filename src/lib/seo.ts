@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const siteConfig = {
   name: "PRAKASH 2027",
   title: "PRAKASH 2027 - International Conference on Indian Knowledge Systems",
-  description: "Join PRAKASH 2027 at PIET, Jaipur - International Conference on Indian Knowledge Systems: Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage. Explore indigenous wisdom, Vedic science, healthcare, and sustainable traditions.",
+  description: "Join PRAKASH 2027 at PIET, Jaipur - International Conference on Indian Knowledge Systems: Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage (Legacy). Explore indigenous wisdom, Vedic science, healthcare, and sustainable traditions.",
   url: "https://www.iciks2027.org",
   ogImage: "/assets/pics/logo-ici.png",
   author: "PIET Department of Applied Sciences",

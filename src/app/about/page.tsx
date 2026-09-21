@@ -26,6 +26,60 @@ const AboutHero = () => {
 };
 
 // AboutIntro Component
+const programmeParticulars = [
+  {
+    particular: "Name of Programme",
+    details: "International Conference on Indian Knowledge Systems"
+  },
+  {
+    particular: "Proposed Titles",
+    details: "PRAKASH 2027: Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage (Legacy)"
+  },
+  {
+    particular: "Organized By",
+    details: "Department of Applied Sciences, Poornima Institute of Engineering & Technology, Jaipur, Rajasthan, India"
+  },
+  {
+    particular: "Duration",
+    details: "2 Days"
+  },
+  {
+    particular: "Tentative Dates",
+    details: "26 February 2027 to 27 February 2027"
+  },
+  {
+    particular: "Time",
+    details: "09:00 AM to 03:00 PM"
+  },
+  {
+    particular: "Tentative Participants",
+    details: "100–150 (including foreign delegates, academicians, research scholars, and industry professionals)"
+  }
+];
+
+const broadAreas = [
+  {
+    title: "Scientific Heritage, Mathematics, and Technology",
+    desc: "Historical developments in Indian mathematics, astronomy, metallurgy, water management, and computational linguistics."
+  },
+  {
+    title: "Holistic Health, Wellness, and Life Sciences",
+    desc: "Integration of Ayurveda, Siddha, and Yoga into modern healthcare systems; ethnobotany and natural product chemistry."
+  },
+  {
+    title: "Environmental Ethics, Sustainable Architecture, and Agriculture",
+    desc: "Vastu Shastra, Traditional Ecological Knowledge (TEK), ancient water conservation, organic farming, and climate change mitigation."
+  },
+  {
+    title: "Governance, Economics, Ethics, and Management",
+    desc: "Kautilya's Arthashastra, Dharma, and Nyaya as foundations for leadership, ethics, and policy; sustainable trade traditions."
+  },
+  {
+    title: "Pedagogy, Arts, and Cultural Heritage",
+    desc: "Implementation of IKS in mainstream education under NEP 2020; Kalas (art forms), performance arts, digitization, and manuscriptology."
+  }
+];
+
 const stats = [
   {
     number: "5",
@@ -42,7 +96,7 @@ const stats = [
   {
     number: "100–150",
     label: "Participants",
-    description: "Global delegates & scholars",
+    description: "Foreign delegates, scholars & professionals",
     id: 3
   },
   {
@@ -117,6 +171,37 @@ const AboutIntro = () => {
 
       <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 flex flex-col gap-20">
         
+        {/* Programme Particulars Table */}
+        <motion.div
+          className="max-w-4xl mx-auto w-full rounded-2xl overflow-hidden shadow-xl shadow-[#EA580C]/5 border border-[#F59E0B]/30 bg-[#FFFDF7]"
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="bg-gradient-to-r from-[#7C2D12] via-[#C2410C] to-[#D97706] px-6 py-4 text-white">
+            <span className="text-xs uppercase font-bold tracking-widest text-[#FED7AA]">Conference At A Glance</span>
+            <h2 className="text-xl md:text-2xl font-bold">Programme Particulars</h2>
+          </div>
+          <div className="divide-y divide-[#F59E0B]/15">
+            {programmeParticulars.map((item, idx) => (
+              <div
+                key={idx}
+                className={`grid grid-cols-1 sm:grid-cols-12 p-4 sm:p-5 gap-2 sm:gap-4 transition-colors ${
+                  idx % 2 === 0 ? "bg-[#FFFDF7]" : "bg-[#FEF9EE]/60"
+                }`}
+              >
+                <div className="sm:col-span-4 font-bold text-sm sm:text-base text-[#7C2D12] flex items-center">
+                  {item.particular}
+                </div>
+                <div className="sm:col-span-8 text-sm sm:text-base text-[#2E1104] font-medium leading-relaxed">
+                  {item.details}
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* About the International Conference Narrative */}
         <motion.div
           className="max-w-4xl mx-auto rounded-2xl p-7 md:p-10 space-y-6"
@@ -210,6 +295,42 @@ const AboutIntro = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Broad Areas to be Covered */}
+        <motion.div
+          className="max-w-5xl mx-auto w-full space-y-6"
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="text-center mb-8">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#EA580C]">Thematic Framework</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1C0B02] mt-1">Broad Areas to be Covered</h2>
+            <div className="mx-auto mt-3 h-0.5 w-16 bg-gradient-to-r from-[#EA580C] to-[#D97706]" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {broadAreas.map((area, idx) => (
+              <div
+                key={idx}
+                className="bg-[#FFFDF7] p-6 rounded-2xl border border-[#F59E0B]/20 hover:border-[#EA580C]/40 hover:shadow-lg transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-2 block">
+                    Area 0{idx + 1}
+                  </span>
+                  <h4 className="font-bold text-base text-[#1C0B02] mb-2 leading-snug">
+                    {area.title}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#2E1104]/80 leading-relaxed">
+                    {area.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Stats Section - Grid border design */}
         <div>

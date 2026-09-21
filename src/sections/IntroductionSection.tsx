@@ -179,7 +179,7 @@ export const IntroductionSection = () => {
 
               <div className="text-sm sm:text-[15px] leading-relaxed mb-8 space-y-4 text-justify" style={{ color: "#2E1104", opacity: 0.9 }}>
                 <p>
-                  The Department of Applied Sciences, Poornima Institute of Engineering and Technology (PIET), Jaipur, proudly presents the <strong>International Conference on Indian Knowledge Systems (PRAKASH 2027)</strong>: <em>Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage</em> on <strong>26th–27th February 2027</strong> in Hybrid Mode.
+                  The Department of Applied Sciences, Poornima Institute of Engineering and Technology (PIET), Jaipur, proudly presents the <strong>International Conference on Indian Knowledge Systems (PRAKASH 2027)</strong>: <em>Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage (Legacy)</em> on <strong>26th–27th February 2027</strong> in Hybrid Mode.
                 </p>
                 <p>
                   Indian Knowledge Systems (IKS) embody a sophisticated, empirical repository of intellectual traditions developed over millennia. From the infinite calculus series of the <strong>Kerala School of Mathematics</strong> to the anatomical insights of the <strong>Charaka Samhita</strong>, and from <strong>Vastu bio-climatic design</strong> to <strong>Kautilya&apos;s Arthashastra</strong>, these methodologies provide crucial solutions for modern global challenges.
