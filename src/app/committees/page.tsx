@@ -22,204 +22,136 @@ const CommitteesHero = () => {
 
 // CommitteesSection Component
 const committeeData = {
-  honoraryPatrons: [
+  chiefPatron: [
     {
       id: 1,
-      name: "Mr. Hari Singh Shekhawat",
-      role: "Director (Infrastructure)",
-      organization: "Poornima Group, Jaipur India"
-    },
-    {
-      id: 2,
-      name: "Mr. MKM Shah",
-      role: "Director (Admin & Finance)",
-      organization: "Poornima Group, Jaipur"
+      name: "Dr. Shashikant Singhi",
+      role: "Chairman",
+      organization: "Poornima Group"
     }
   ],
   patron: [
     {
-      id: 3,
-      name: "Prof (Dr.) Dinesh Goyal",
-      role: "Director & Principal",
-      organization: "PIET"
+      id: 2,
+      name: "Ar. Rahul Singhi",
+      role: "Group Director",
+      organization: "Poornima Group"
     }
   ],
-  conferenceChair: [
+  chairperson: [
     {
-      id: 4,
-      name: "Prof. (Dr.) Rekha Nair",
-      role: "Professor, Department of Applied Sciences",
-      organization: "Poornima Institute of Engineering & Technology, India"
+      id: 3,
+      name: "Dr. Dinesh Goyal",
+      role: "Director & Principal",
+      organization: "PIET, Jaipur"
     }
   ],
   conveners: [
     {
-      id: 5,
-      name: "Dr Mahak Bhatia",
-      role: "Associate Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
+      id: 4,
+      name: "Dr. Krati Sharma",
+      role: "Professor",
+      organization: "Department of Applied Sciences"
     },
     {
-      id: 6,
-      name: "Dr Ashwini Kumar",
-      role: "Associate Professor, Department of Computer Science",
-      organization: "Poornima Institute of Engineering & Technology"
+      id: 5,
+      name: "Dr. Neetu Sharma",
+      role: "Associate Professor",
+      organization: "Department of Applied Sciences"
     }
   ],
-  organizingSecretaries: [
+  organizingMembers: [
     {
+      sNo: 1,
+      id: 6,
+      name: "Dr. Rekha Nair",
+      role: "Professor & HOD",
+      organization: "Department of Applied Sciences"
+    },
+    {
+      sNo: 2,
       id: 7,
       name: "Dr. Deepen Banoriya",
-      role: "Professor, Department of Applied Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
+      role: "Professor & Dy. HOD (Admin)"
     },
     {
+      sNo: 3,
       id: 8,
       name: "Dr. Rituraj Singh Rathore",
-      role: "Associate Professor, Department of Applied Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
-    }
-  ],
-  organizingChairs: [
+      role: "Associate Professor & Dy. HOD (Academics)"
+    },
     {
+      sNo: 4,
       id: 9,
-      name: "Prof. (Dr) Anil Kumar"
+      name: "Dr. O.P. Sikhwal",
+      role: "Professor"
     },
     {
+      sNo: 5,
       id: 10,
-      name: "Prof. (Dr.) Budesh Kanwar"
+      name: "Dr. Nitin Mathur",
+      role: "Associate Professor"
     },
     {
+      sNo: 6,
       id: 11,
-      name: "Prof. (Dr.) Payal Bansal"
-    }
-  ],
-  organizingCoChairs: [
+      name: "Dr. Prince Dawar",
+      role: "Associate Professor"
+    },
     {
+      sNo: 7,
       id: 12,
-      name: "Dr. Shikha Gautam"
+      name: "Dr. Mahak Bhatia",
+      role: "Associate Professor"
     },
     {
+      sNo: 8,
       id: 13,
-      name: "Dr. Uday Pratap"
+      name: "Ms. Neha Shekhawat",
+      role: "Assistant Professor"
     },
     {
+      sNo: 9,
       id: 14,
-      name: "Mr. Amit Kumar"
+      name: "Ms. Charul Bapna",
+      role: "Assistant Professor"
     },
     {
+      sNo: 10,
       id: 15,
-      name: "Mr Abhishek Dandich"
-    },
-    {
-      id: 16,
-      name: "Ms. Alka Rani"
-    },
-    {
-      id: 17,
-      name: "Mr Vikas Kumar"
-    }
-  ],
-  technicalProgramCommittee: [
-    {
-      id: 18,
-      name: "Prof. O.P. Sikhwal",
-      role: "Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 19,
-      name: "Prof. Priya Mathur",
-      role: "Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 20,
-      name: "Dr. Madhav",
-      role: "Professor, Department of Computer Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 21,
-      name: "Dr Aisha Rafi",
-      role: "Associate Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 22,
-      name: "Dr Pooja Rani",
-      role: "Assistant Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 23,
-      name: "Mr Ashok Kumar",
-      role: "Assistant Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 24,
       name: "Ms. Rimjhim Jain",
-      role: "Assistant Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
+      role: "Assistant Professor"
     },
     {
-      id: 25,
-      name: "Dr Shruti Gupta",
-      role: "Associate Professor, Department of Computer Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
+      sNo: 11,
+      id: 16,
+      name: "Mr. Vishal Rohela",
+      role: "Assistant Professor"
     },
     {
-      id: 26,
-      name: "Dr Shruti Thapar",
-      role: "Associate Professor, Department of Computer Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
+      sNo: 12,
+      id: 17,
+      name: "Mr. Vishnu Prakash Sharma",
+      role: "Assistant Professor"
     },
     {
-      id: 27,
-      name: "Dr. Rittam Dutta",
-      role: "Associate Professor, Department of Computer Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
+      sNo: 13,
+      id: 18,
+      name: "Mr. Arvind Mathur",
+      role: "Assistant Professor"
     },
     {
-      id: 28,
-      name: "Dr. Khushboo",
-      role: "Assistant Professor, Department of Computer Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
+      sNo: 14,
+      id: 19,
+      name: "Mr. Himanshu Giria",
+      role: "Assistant Professor"
+    },
+    {
+      sNo: 15,
+      id: 20,
+      name: "Mr. Shiv Prakash Dadhich",
+      role: "Assistant Professor"
     }
-  ],
-  publicationCommittee: [
-    {
-      id: 29,
-      name: "Prof. O.P. Sikhwal",
-      role: "Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 30,
-      name: "Dr. Shikha Gautam",
-      role: "Professor, Department of Computer Sciences",
-      organization: "Poornima Institute of Engineering & Technology"
-    },
-    {
-      id: 90,
-      name: "Dr Pooja rani",
-      role: "Assistant Professor, Department of Mathematics",
-      organization: "Poornima Institute of Engineering & Technology"
-    }
-  ],
-  socialMediaCommittee: [
-    { id: 31, name: "Prof. Krati Bhoomia" },
-    { id: 32, name: "Ms. Charul Bapna" },
-    { id: 33, name: "Ms Dhwani Gangal" },
-    { id: 34, name: "Mr Himanshu Giria" },
-    { id: 35, name: "Mr Shiv Prakash" },
-    { id: 36, name: "Mr Vishnu Prakash" }
-  ],
-  financeCommittee: [
-    { id: 37, name: "Dr Nitin Mathur" },
-    { id: 38, name: "Mr Vishal Rohella" },
-    { id: 39, name: "Dr. Neetu Sharma" }
   ],
   internationalAdvisory: [
     {
@@ -551,11 +483,6 @@ const committeeData = {
       name: "Dr. R. P. Sharma",
       organization: "Govt. Engineering College, Ajmer (Raj.)"
     },
-  ],
-  ethicsPublicationIntegrityCommittee: [
-    { id: 87, name: "Mr Sharad Shrivastava" },
-    { id: 88, name: "Ms Dhwani Gangwal" },
-    { id: 89, name: "Ms Rimjhim Jain" }
   ]
 };
 
@@ -589,6 +516,13 @@ const CommitteesSection = () => {
   const CommitteeCard = ({ member, index, cardWidthClass }: { member: any, index: number, cardWidthClass: string }) => {
     const cardContent = (
       <div className="flex flex-col justify-center h-full space-y-3">
+        {member.sNo && (
+          <div className="flex justify-center mb-1">
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold bg-[#EA580C]/10 text-[#C2410C] border border-[#EA580C]/20 shadow-sm">
+              {member.sNo}
+            </span>
+          </div>
+        )}
         {member.logo && (
           <div className="mb-2 flex justify-center h-30 relative px-2">
             <Image
@@ -684,20 +618,13 @@ const CommitteesSection = () => {
 
       <div className="container px-4 relative z-10">
         <div className="mt-4 px-4 max-w-7xl mx-auto">
-          <CommitteeSection title="HONORARY PATRONS" members={committeeData.honoraryPatrons} startIndex={0} />
-          <CommitteeSection title="PATRON" members={committeeData.patron} startIndex={2} />
-          <CommitteeSection title="CONFERENCE CHAIR" members={committeeData.conferenceChair} startIndex={3} />
-          <CommitteeSection title="CONVENERS" members={committeeData.conveners} startIndex={4} />
-          <CommitteeSection title="CONFERENCE ORGANIZING SECRETARIES" members={committeeData.organizingSecretaries} startIndex={6} />
-          <CommitteeSection title="ORGANIZING CHAIRS" members={committeeData.organizingChairs} startIndex={8} />
-          <CommitteeSection title="ORGANIZING CO-CHAIRS" members={committeeData.organizingCoChairs} startIndex={11} />
-          <CommitteeSection title="TECHNICAL PROGRAM COMMITTEE" members={committeeData.technicalProgramCommittee} startIndex={17} />
-          <CommitteeSection title="PUBLICATION COMMITTEE" members={committeeData.publicationCommittee} startIndex={28} />
-          <CommitteeSection title="SOCIAL MEDIA COMMITTEE" members={committeeData.socialMediaCommittee} startIndex={30} />
-          <CommitteeSection title="FINANCE COMMITTEE" members={committeeData.financeCommittee} startIndex={36} />
-          <CommitteeSection title="INTERNATIONAL ADVISORY COMMITTEE" members={committeeData.internationalAdvisory} startIndex={39} />
-          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={57} />
-          <CommitteeSection title="ETHICS & PUBLICATION INTEGRITY COMMITTEE" members={committeeData.ethicsPublicationIntegrityCommittee} startIndex={86} />
+          <CommitteeSection title="CHIEF PATRON" members={committeeData.chiefPatron} startIndex={0} />
+          <CommitteeSection title="PATRON" members={committeeData.patron} startIndex={1} />
+          <CommitteeSection title="CHAIRPERSON" members={committeeData.chairperson} startIndex={2} />
+          <CommitteeSection title="CONVENERS" members={committeeData.conveners} startIndex={3} />
+          <CommitteeSection title="ORGANIZING MEMBERS" members={committeeData.organizingMembers} startIndex={5} />
+          <CommitteeSection title="INTERNATIONAL ADVISORY COMMITTEE" members={committeeData.internationalAdvisory} startIndex={20} />
+          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={38} />
         </div>
       </div>
     </section>
