@@ -161,7 +161,7 @@ const committeeData = {
     {
       sNo: 17,
       id: 22,
-      name: "Ms. Vandana Rajawat",
+      name: "Dr. Vandana Rajawat",
       role: "Dept of IoT"
     },
     {
@@ -196,37 +196,6 @@ const committeeData = {
       role: "Editor, JICES (Emerald) & Author, Leadership & Philosophy (Routledge 2025)",
       organization: "University of Rome Tor Vergata, Rome, Italy"
     },
-    {
-      id: 52,
-      name: "Prof Roman Danel",
-      organization: "Institute of Technology and Business, Czech Republic, Europe"
-    },
-    {
-      id: 53,
-      name: "Prof. Mike Hinchey",
-      organization: "Chair UK and Ireland Section IEEE, UK, Ireland, Europe"
-    },
-    {
-      id: 54,
-      name: "Dr. Ankit Agrawal",
-      organization: "Northwestern University, USA, North America"
-    },
-    {
-      id: 55,
-      name: "Prof. Valentina E. Balas",
-      organization: "University of Arad, Romania, Europe"
-    },
-    {
-      id: 56,
-      name: "Dr. Sheng-Lung Peng",
-      organization: "National Tsing Hua University, Taiwan, Asia"
-    },
-    {
-      id: 57,
-      name: "Dr. Abhishek Mukherji",
-      role: "Field CTO & AVP / Head of AI Research",
-      organization: "Centerific, USA, North America"
-    }
   ],
   nationalAdvisory: [
     {
@@ -482,7 +451,7 @@ const CommitteesSection = () => {
           <CommitteeSection title="CONVENERS" members={committeeData.conveners} startIndex={3} />
           <CommitteeSection title="ORGANIZING MEMBERS" members={committeeData.organizingMembers} startIndex={5} />
           <CommitteeSection title="INTERNATIONAL ADVISORY COMMITTEE" members={committeeData.internationalAdvisory} startIndex={23} />
-          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={33} />
+          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={27} />
         </div>
       </div>
     </section>
