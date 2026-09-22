@@ -30,7 +30,7 @@ const CallForPaperHero = () => {
       title="Call for Papers"
       subtitle="Submit original, high-quality research across 5 broad tracks & 35+ sub-tracks in Indian Knowledge Systems"
       tagline="Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage (Legacy)"
-      primaryCta={{ label: "Submit Paper via Email", href: "mailto:iks2027@poornima.org?subject=Paper%20Submission%20-%20PRAKASH%202027" }}
+      primaryCta={{ label: "Submit Paper via Email", href: "mailto:iksconf.prakash@poornima.org?subject=Paper%20Submission%20-%20PRAKASH%202027" }}
       secondaryCta={{ label: "Explore 5 Tracks", href: "#tracks" }}
     />
   );
@@ -409,7 +409,7 @@ const CallForPaperContent = () => {
                 ))}
               </div>
               <p className="text-xs text-[#FED7AA]/80 italic">
-                To reserve an exhibition kiosk or present in the startup demo session, write to us at <a href="mailto:iks2027@poornima.org" className="underline text-[#FBBF24]">iks2027@poornima.org</a>.
+                To reserve an exhibition kiosk or present in the startup demo session, write to us at <a href="mailto:iksconf.prakash@poornima.org" className="underline text-[#FBBF24]">iksconf.prakash@poornima.org</a>.
               </p>
             </div>
           </div>
@@ -477,13 +477,13 @@ const CallForPaperContent = () => {
                 </p>
 
                 <a
-                  href="mailto:iks2027@poornima.org?subject=Paper%20Submission%20-%20PRAKASH%202027"
+                  href="mailto:iksconf.prakash@poornima.org?subject=Paper%20Submission%20-%20PRAKASH%202027"
                   className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold tracking-tight transition-all duration-200 hover:scale-[1.02] hover:shadow-md text-white w-full shadow-md shadow-[#EA580C]/25"
                   style={{
                     background: "linear-gradient(135deg, #EA580C 0%, #D97706 100%)",
                   }}
                 >
-                  Submit Paper to iks2027@poornima.org
+                  Submit Paper to iksconf.prakash@poornima.org
                   <FaExternalLinkAlt className="text-xs" />
                 </a>
 
@@ -515,7 +515,7 @@ const CallForPaperContent = () => {
                   </div>
                   <div className="flex justify-between border-b border-[#F59E0B]/15 pb-2">
                     <span className="font-semibold text-[#1C0B02]">Daily Timing:</span>
-                    <span>09:00 AM – 03:00 PM (IST)</span>
+                    <span>08:00 AM – 03:00 PM (IST)</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-semibold text-[#1C0B02]">Expected Attendance:</span>

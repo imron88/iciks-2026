@@ -151,6 +151,24 @@ const committeeData = {
       id: 20,
       name: "Mr. Shiv Prakash Dadhich",
       role: "Assistant Professor"
+    },
+    {
+      sNo: 16,
+      id: 21,
+      name: "Dr. Ashwani Kumar",
+      role: "Dept of CS"
+    },
+    {
+      sNo: 17,
+      id: 22,
+      name: "Ms. Vandana Rajawat",
+      role: "Dept of IoT"
+    },
+    {
+      sNo: 18,
+      id: 23,
+      name: "Ms. Jyoti Panchariya",
+      role: "Dept of AI & DS"
     }
   ],
   internationalAdvisory: [
@@ -177,66 +195,6 @@ const committeeData = {
       name: "Dr. Antonio Marturano (PhD Law, Milan)",
       role: "Editor, JICES (Emerald) & Author, Leadership & Philosophy (Routledge 2025)",
       organization: "University of Rome Tor Vergata, Rome, Italy"
-    },
-    {
-      id: 40,
-      name: "Makinde, O. D.",
-      organization: "Stellenbosch University, Stellenbosch, South Africa"
-    },
-    {
-      id: 41,
-      name: "Opeyemi Oyedeji, Mojeed",
-      organization: "King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia"
-    },
-    {
-      id: 42,
-      name: "Prof. (Dr.) Brij B. Gupta",
-      organization: "Asia University, Taiwan"
-    },
-    {
-      id: 43,
-      name: "Prof. (Dr.) K. S. Nisar",
-      organization: "Prince Sattam Bin Abdulaziz University, Saudi Arabia"
-    },
-    {
-      id: 44,
-      name: "Prof. (Dr.) Dumitru Baleanu",
-      organization: "Cankaya University, Ankara, Turkey"
-    },
-    {
-      id: 45,
-      name: "Prof. (Dr.) Amer Ibrahim Al-Omari",
-      organization: "Al al-Bayt University, Jordan"
-    },
-    {
-      id: 46,
-      name: "Prof. (Dr.) A.M. Elsawah",
-      organization: "Beijing Normal University-Hong Kong Baptist University United International College, Zhuhai, China"
-    },
-    {
-      id: 47,
-      name: "Prof. (Dr.) Ong Seng Huat",
-      organization: "UCSI University, Malaysia"
-    },
-    {
-      id: 48,
-      name: "Prof. (Dr.) Sathiyaraj Thambiayya",
-      organization: "UCSI University, Kuala Lumpur, Malaysia"
-    },
-    {
-      id: 49,
-      name: "Prof. (Dr.) Ismail Naci Cangul",
-      organization: "Uludag University, Turkey"
-    },
-    {
-      id: 50,
-      name: "Prof. (Dr.) Vichian Laohakosol",
-      organization: "Kasetsart University, Bangkok, Thailand"
-    },
-    {
-      id: 51,
-      name: "Dr. Carlos M. Travieso-Gonzalez",
-      organization: "University of Las Palmas de Gran Canaria, Spain, Europe"
     },
     {
       id: 52,
@@ -344,66 +302,6 @@ const committeeData = {
       organization: "Rajasthan, India"
     },
     {
-      id: 58,
-      name: "Prof (Dr.) Somitra Sanadhya",
-      organization: "Wadhwani School of AI and Intelligent Systems, IIT Kanpur, India, Asia"
-    },
-    {
-      id: 59,
-      name: "Prof. (Dr.) Dhanesh Patel",
-      organization: "Maharaja Sayajirao University of Baroda, Gujarat, India"
-    },
-    {
-      id: 60,
-      name: "Prof. (Dr.) S. Ponnusamy",
-      organization: "IIT, Chennai, India"
-    },
-    {
-      id: 61,
-      name: "Prof. (Dr.) Gajendra Kumar Vishwakarma",
-      organization: "IIT, Dhanbad, India"
-    },
-    {
-      id: 62,
-      name: "Prof. (Dr.) Swadesh Kumar Sahoo",
-      organization: "IIT, Indore, India"
-    },
-    {
-      id: 63,
-      name: "Dr. J. C. Bansal",
-      organization: "South Asian University, New Delhi, India"
-    },
-    {
-      id: 64,
-      name: "Prof. (Dr.) Kuldeep Singh Charak",
-      organization: "University of Jammu, Jammu"
-    },
-    {
-      id: 65,
-      name: "Prof. D.S. Hooda",
-      organization: "Former PVC, Kurukshetra, GJ University of Science, Hisar"
-    },
-    {
-      id: 66,
-      name: "Dr. K. K. Gupta",
-      organization: "Shri Ram Murti Smarak College of Engineering & Technology, Bareilly"
-    },
-    {
-      id: 67,
-      name: "Prof. (Dr.) C.B. Gupta",
-      organization: "Former Professor, BITS, Pilani and The North Cap University, Gurugram, India"
-    },
-    {
-      id: 68,
-      name: "Prof. (Dr.) Anil Goyal",
-      organization: "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (M. P.) India"
-    },
-    {
-      id: 69,
-      name: "Prof. (Dr.) D. K. Jain",
-      organization: "Madhav Institute of Technology & Science (MITS), Gwalior (M. P.) India"
-    },
-    {
       id: 70,
       name: "Dr. Sandeep Tiwari",
       organization: "Vikram University, Ujjain (M.P.)"
@@ -442,46 +340,6 @@ const committeeData = {
       id: 77,
       name: "Dr. Ravi Gor",
       organization: "Gujarat University, Ahmedabad"
-    },
-    {
-      id: 78,
-      name: "Prof. (Dr.) K. Srinivasa Rao",
-      organization: "SCSVMV University, Kanchipuram, Tamilnadu"
-    },
-    {
-      id: 79,
-      name: "Dr. Kailash M. Patil",
-      organization: "Dharmsinh Desai University, Nadiad, Gujarat"
-    },
-    {
-      id: 80,
-      name: "Dr. Ramakant Bhardwaj",
-      organization: "AMITY University, Kolkata (W.B.)"
-    },
-    {
-      id: 81,
-      name: "Dr. Vipin Kumar",
-      organization: "BKBIET, Pilani"
-    },
-    {
-      id: 82,
-      name: "Prof. (Dr.) A. K. Malik",
-      organization: "Rajarshi Tandon Open University, Prayagraj, (U. P.) India"
-    },
-    {
-      id: 83,
-      name: "Dr. R. K. Gujetiya",
-      organization: "Swami Vivekanand Govt. P. G. College, Neemuch (M. P.)"
-    },
-    {
-      id: 84,
-      name: "Dr. V. C. Jain",
-      organization: "Govt. Engineering College, Ajmer (Raj.)"
-    },
-    {
-      id: 85,
-      name: "Dr. R. P. Sharma",
-      organization: "Govt. Engineering College, Ajmer (Raj.)"
     },
   ]
 };
@@ -623,8 +481,8 @@ const CommitteesSection = () => {
           <CommitteeSection title="CHAIRPERSON" members={committeeData.chairperson} startIndex={2} />
           <CommitteeSection title="CONVENERS" members={committeeData.conveners} startIndex={3} />
           <CommitteeSection title="ORGANIZING MEMBERS" members={committeeData.organizingMembers} startIndex={5} />
-          <CommitteeSection title="INTERNATIONAL ADVISORY COMMITTEE" members={committeeData.internationalAdvisory} startIndex={20} />
-          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={38} />
+          <CommitteeSection title="INTERNATIONAL ADVISORY COMMITTEE" members={committeeData.internationalAdvisory} startIndex={23} />
+          <CommitteeSection title="NATIONAL ADVISORY COMMITTEE" members={committeeData.nationalAdvisory} startIndex={33} />
         </div>
       </div>
     </section>

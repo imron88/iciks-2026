@@ -49,7 +49,7 @@ const programmeParticulars = [
   },
   {
     particular: "Time",
-    details: "09:00 AM to 03:00 PM"
+    details: "08:00 AM to 03:00 PM (8.00 AM – 3.00 PM)"
   },
   {
     particular: "Tentative Participants",

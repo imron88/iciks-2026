@@ -73,14 +73,6 @@ const speakers: Speaker[] = [
     image: defaultPhoto,
   },
   {
-    id: "speaker-6",
-    name: "Prof. Kshitij Patukale",
-    designation: "Director & IKS Scholar",
-    institution: "Bhishma School of Indian Knowledge System, Pune",
-    country: "India",
-    image: defaultPhoto,
-  },
-  {
     id: "speaker-7",
     name: "Prof. Deepa S P Mathur",
     designation: "Professor, Department of English",

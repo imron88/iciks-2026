@@ -83,7 +83,7 @@ export const RegistrationContent = () => {
                     <li>e) Paper_ID_Copyright (Signed Springer copyright form)</li>
                   </ul>
                   <p className="text-xs sm:text-sm mt-3 font-semibold text-slate-700">
-                    Compress all these files into a single zip file named &quot;Paper_ID_PRAKASH_2027&quot; and email it to <a href="mailto:iks2027@poornima.org" className="text-[#4849F8] hover:underline">iks2027@poornima.org</a>.
+                    Compress all these files into a single zip file named &quot;Paper_ID_PRAKASH_2027&quot; and email it to <a href="mailto:iksconf.prakash@poornima.org" className="text-[#4849F8] hover:underline">iksconf.prakash@poornima.org</a>.
                   </p>
                 </div>
               </div>

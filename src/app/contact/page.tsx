@@ -12,7 +12,7 @@ const ContactHero = () => {
       badge="॥ तमसो मा ज्योतिर्गमय ॥ · PRAKASH 2027"
       title="Contact Secretariat"
       subtitle="Have questions about PRAKASH 2027? Reach out to the organizing team for paper submissions, IKS Expo participation, and registration inquiries."
-      primaryCta={{ label: "Email Secretariat", href: "mailto:iks2027@poornima.org" }}
+      primaryCta={{ label: "Email Secretariat", href: "mailto:iksconf.prakash@poornima.org" }}
       secondaryCta={{ label: "View Campus Location", href: "#map" }}
     />
   );
@@ -63,7 +63,7 @@ const ContactInfoSection = () => (
             <br />
             Rajasthan, India
             <br />
-            <span className="text-xs text-[#EA580C] font-bold mt-2 inline-block">Timings: 09:00 AM to 03:00 PM (IST)</span>
+            <span className="text-xs text-[#EA580C] font-bold mt-2 inline-block">Timings: 08:00 AM to 03:00 PM (IST)</span>
           </p>
         </motion.div>
 
@@ -90,10 +90,10 @@ const ContactInfoSection = () => (
           </p>
           <div className="relative flex flex-col gap-2">
             <a
-              href="mailto:iks2027@poornima.org"
+              href="mailto:iksconf.prakash@poornima.org"
               className="text-lg text-[#EA580C] hover:text-[#C2410C] font-bold transition-all"
             >
-              iks2027@poornima.org
+              iksconf.prakash@poornima.org
             </a>
           </div>
         </motion.div>

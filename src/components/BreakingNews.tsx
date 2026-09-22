@@ -23,7 +23,7 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 4,
-    text: "🏛️ PRAKASH 2027: 26–27 February 2027 | Hybrid Mode (09:00 AM – 03:00 PM IST)"
+    text: "🏛️ PRAKASH 2027: 26–27 February 2027 | Hybrid Mode (08:00 AM – 03:00 PM IST)"
   },
   {
     id: 5,

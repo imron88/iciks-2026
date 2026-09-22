@@ -219,7 +219,7 @@ const ReportFormSection = () => (
             <h4 className="text-lg font-semibold text-[#090B26] mb-6">Need to Report Something Now?</h4>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="mailto:iks2027@poornima.org"
+                href="mailto:iksconf.prakash@poornima.org"
                 className="bg-gradient-to-r from-[#4849F8] to-[#183EC2] text-white px-8 py-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

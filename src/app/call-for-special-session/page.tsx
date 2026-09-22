@@ -13,7 +13,7 @@ const SpecialSessionHero = () => {
       subtitle="A forum for focused discussions on emerging topics, indigenous technologies, and innovative IKS applications"
       tagline="A forum for focused discussions on emerging topics and innovative IKS applications"
       primaryCta={{ label: "Download Proposal Template", href: "/assets/special-session-proposal.docx" }}
-      secondaryCta={{ label: "Submit via Email", href: "mailto:iks2027@poornima.org?subject=Special%20Session%20Proposal%20-%20PRAKASH%202027" }}
+      secondaryCta={{ label: "Submit via Email", href: "mailto:iksconf.prakash@poornima.org?subject=Special%20Session%20Proposal%20-%20PRAKASH%202027" }}
     />
   );
 };

@@ -134,7 +134,7 @@ export const AccountDetails = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a 
-                    href="mailto:iks2027@poornima.org"
+                    href="mailto:iksconf.prakash@poornima.org"
                     className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors text-center"
                   >
                     Email Support

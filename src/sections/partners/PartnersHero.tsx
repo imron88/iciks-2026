@@ -10,7 +10,7 @@ export const PartnersHero = () => {
       tagline="Empowering sustainable heritage through academic, institutional, and industrial collaboration"
       primaryCta={{
         label: "Partner with Us",
-        href: "mailto:iks2027@poornima.org?subject=Partnership%20Inquiry%20-%20PRAKASH%202027",
+        href: "mailto:iksconf.prakash@poornima.org?subject=Partnership%20Inquiry%20-%20PRAKASH%202027",
       }}
       secondaryCta={{ label: "About Conference", href: "/about" }}
     />

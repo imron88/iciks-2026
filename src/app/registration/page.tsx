@@ -105,7 +105,7 @@ const RegistrationContent = () => {
                     <li>e) Paper_ID_Copyright (Signed Springer copyright form)</li>
                   </ul>
                   <p className="text-xs sm:text-sm mt-3 font-semibold text-[#1C0B02]">
-                    Compress all these files into a single zip file named &quot;Paper_ID_PRAKASH_2027&quot; and email it to <a href="mailto:iks2027@poornima.org" className="text-[#EA580C] hover:underline">iks2027@poornima.org</a>.
+                    Compress all these files into a single zip file named &quot;Paper_ID_PRAKASH_2027&quot; and email it to <a href="mailto:iksconf.prakash@poornima.org" className="text-[#EA580C] hover:underline">iksconf.prakash@poornima.org</a>.
                   </p>
                 </div>
               </div>
@@ -488,7 +488,7 @@ const AccountDetails = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a 
-                    href="mailto:iks2027@poornima.org"
+                    href="mailto:iksconf.prakash@poornima.org"
                     className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors text-center"
                   >
                     Email Support

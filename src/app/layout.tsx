@@ -145,7 +145,7 @@ export default function RootLayout({
     "name": "PRAKASH 2027 - International Conference on Indian Knowledge Systems",
     "description": "International Conference on Indian Knowledge Systems: Promoting Research, Advancement, and Knowledge Systems for Applied Sustainable Heritage at PIET, Jaipur.",
     "url": "https://www.iciks2027.org",
-    "startDate": "2027-02-26T09:00:00+05:30",
+    "startDate": "2027-02-26T08:00:00+05:30",
     "endDate": "2027-02-27T15:00:00+05:30",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",

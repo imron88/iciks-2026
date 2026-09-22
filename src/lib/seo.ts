@@ -109,7 +109,7 @@ export function generateEventStructuredData(eventData?: Partial<{
     "name": eventData?.name || "PRAKASH 2027 - International Conference on Indian Knowledge Systems",
     "description": eventData?.description || siteConfig.description,
     "url": siteConfig.url,
-    "startDate": eventData?.startDate || "2027-02-26T09:00:00+05:30",
+    "startDate": eventData?.startDate || "2027-02-26T08:00:00+05:30",
     "endDate": eventData?.endDate || "2027-02-27T15:00:00+05:30",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
@@ -164,7 +164,7 @@ export function generateOrganizationStructuredData() {
       "@type": "ContactPoint",
       "telephone": "+91-9414855062",
       "contactType": "customer service",
-      "email": "iks2027@poornima.org",
+      "email": "iksconf.prakash@poornima.org",
       "availableLanguage": "English"
     },
     "address": {

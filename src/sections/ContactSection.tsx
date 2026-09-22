@@ -13,7 +13,7 @@ const contactItems = [
       </svg>
     ),
     label: "Email",
-    lines: ["iks2027@poornima.org"],
+    lines: ["iksconf.prakash@poornima.org"],
     accent: "#EA580C",
   },
   {
